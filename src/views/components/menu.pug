@@ -1,0 +1,22 @@
+.menu
+	.menu__logo
+		a(href='/')
+			img(src=require('images/logo.svg'), alt="")
+	nav
+		li
+			a(href='/') Главная
+		li
+			a.anchor(href='#about') О приложении
+		li
+			a.anchor(href='#help') Ваша помощь
+		li
+			a.anchor(href='#fond') Фонд
+		li
+			a.anchor(href='#facts') Цифры и факты
+		li
+			a.anchor(href='#faq') Вопросы
+	.menu__group
+		a.menu__button.button.button--small(href='#') Хочу помочь
+		.menu__link Сайт Яркая жизнь
+	.menu__burger.js-menu-close
+		span

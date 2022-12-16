@@ -1,0 +1,259 @@
+/* src/assets/styles/components/_footer.scss  */
+
+.footer {
+	background-color: $blue-22;
+	color: $white;
+
+	&__wrapper {
+		@include isFlex(flex-start, space-between);
+		padding: 75px 0 44px;
+		gap: 10px;
+
+		@include max(md) {
+			@include isFlex(flex-start, center);
+			padding: 42px 0 30px;
+			gap: 30px;
+		}
+
+		@include max(sm) {
+			@include isFlex(center, center, column);
+		}
+	}
+
+	&__col {
+		@include max(sm) {
+			width: 100%;
+			margin-bottom: 56px;
+		}
+
+		&:last-child {
+			@include max(md) {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&__label {
+		font-size: 20px;
+		line-height: 32px;
+		text-transform: uppercase;
+		margin-bottom: 37px;
+
+		@include max(md) {
+			text-align: center;
+			margin-bottom: 35px;
+		}
+	}
+
+	&__contacts {
+		@include isFlex(flex-start, flex-start, column);
+		font-size: 16px;
+		line-height: 32px;
+
+		@include max(md) {
+			align-items: center;
+			text-align: center;
+		}
+
+		address {
+			color: rgba($white, 0.5);
+			font-style: normal;
+		}
+
+		a {
+			margin-top: 12px;
+			transition: 0.3s ease;
+
+			@include hover {
+				opacity: 0.7;
+			}
+
+			@include max(md) {
+				margin: 7px auto 0;
+			}
+		}
+	}
+
+	ul {
+		li {
+			font-size: 16px;
+			line-height: 32px;
+
+			@include max(md) {
+				text-align: center;
+			}
+
+			+ li {
+				margin-top: 6px;
+			}
+
+			a {
+				transition: 0.3s ease;
+
+				@include hover {
+					opacity: 0.7;
+				}
+			}
+		}
+	}
+
+	&__winner {
+		text-align: center;
+
+		span {
+			font-size: 28px;
+			line-height: 37px;
+			text-transform: uppercase;
+
+			@include max(md) {
+				font-size: 24px;
+				line-height: 31px;
+			}
+		}
+
+		img {
+			margin: 35px auto 0;
+
+			@include max(md) {
+				margin: 20px auto 0;
+			}
+		}
+	}
+
+	&__form {
+		p {
+			font-size: 14px;
+			line-height: 32px;
+			text-transform: uppercase;
+
+			@include max(md) {
+				text-align: center;
+			}
+		}
+
+		form {
+			margin-top: 37px;
+
+			@include max(md) {
+				margin-top: 17px;
+			}
+		}
+
+		label {
+			display: block;
+			position: relative;
+		}
+
+		button {
+			width: 50px;
+			height: 50px;
+			padding: 0;
+			position: absolute;
+			top: 0;
+			right: -1px;
+			cursor: pointer;
+
+			img {
+				margin-right: 0;
+			}
+		}
+
+		input {
+			border: 1px solid $gray-da;
+			border-radius: 24px;
+			background-color: $white;
+			font-size: 16px;
+			line-height: 32px;
+			padding: 8px 60px 8px 24px;
+			box-sizing: border-box;
+			transition: 0.3s ease;
+
+			@include hover {
+				border-color: $blue-22;
+			}
+
+			@include max(md) {
+				width: 100%;
+			}
+
+			&::placeholder {
+				font-family: $mainfont;
+				font-size: 16px;
+				line-height: 32px;
+				color: rgba($black-33, 0.5);
+			}
+		}
+	}
+
+	&__bottom {
+		@include isFlex(center, space-between);
+		border-top: 1px solid rgba($white, 0.1);
+		padding: 35px 0;
+
+		@include max(md) {
+			padding: 40px 0;
+		}
+
+		@include max(md) {
+			flex-direction: column;
+		}
+	}
+
+	&__left,
+	&__center,
+	&__right {
+		width: 33%;
+
+		@include max(md) {
+			width: 100%;
+		}
+	}
+
+	&__left {
+		@include isFlex(center, flex-start);
+		gap: 15px;
+
+		@include max(md) {
+			justify-content: center;
+			gap: 17px;
+		}
+
+		a {
+			transition: 0.3s ease;
+
+			@include hover {
+				opacity: 0.7;
+			}
+		}
+	}
+
+	&__center {
+		@include isFlex();
+
+		@include max(md) {
+			margin-top: 77px;
+		}
+	}
+
+	&__center-inner {
+		@include isFlex(center, flex-start);
+		gap: 20px;
+
+		@include max(md) {
+			justify-content: center;
+			gap: 27px;
+		}
+	}
+
+	&__right {
+		@include isFlex(center, flex-end);
+		font-size: 16px;
+		line-height: 32px;
+		color: rgba($white, 0.5);
+
+		@include max(md) {
+			justify-content: center;
+			margin-top: 31px;
+		}
+	}
+}

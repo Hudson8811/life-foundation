@@ -1,0 +1,37 @@
+//- Master layout
+
+doctype html
+html(lang='ru')
+	head
+
+		//- Meta
+		meta(charset='UTF-8')
+		meta(name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0')
+		meta(http-equiv='X-UA-Compatible', content='ie=edge')
+
+
+		//- Title
+		block title
+			title Благотворительный фонд "Яркая жизнь"
+
+	body
+		//- Header
+		include ../components/header.pug
+
+		//- Mobile menu
+		include ../components/menu.pug
+
+		//- block content
+		.main
+			block content
+
+		//- Footer
+		include ../components/footer.pug
+
+		//- Modal
+		include ../components/_modal.pug
+
+		//- block scripts
+		block scripts
+
+		script

@@ -1,0 +1,57 @@
+//- src/views/components/footer.pug
+
+footer.footer
+	.container
+		.footer__wrapper
+			.footer__col
+				.footer__label Соцсети
+				.socials
+					a.button.socials__link(href='#')
+						img(src=require('images/socials/fb.svg'), alt="")
+					a.button.socials__link(href='#')
+						img(src=require('images/socials/tw.svg'), alt="")
+					a.button.socials__link(href='#')
+						img(src=require('images/socials/inst.svg'), alt="")
+			.footer__col
+				.footer__label Контакты
+				.footer__contacts
+					address Санкт-Петербург, <br> Невский проспект, дом 100
+					a(href='mailto:brightlifefund@gmail.com') brightlifefund@gmail.com
+					a(href='tel:88129440496') 8 (812) 944-04-96
+					a(href='tel:88129382343') 8 (812) 938-23-43
+			.footer__col
+				.footer__label Меню
+				ul
+					li
+						a(href='/') Главная
+					li
+						a.anchor(href='#about') О приложении
+					li
+						a.anchor(href='#help') Ваша помощь
+					li
+						a.anchor(href='#fond') Фонд
+					li
+						a.anchor(href='#facts') Цифры и факты
+					li
+						a.anchor(href='#faq') Вопросы
+			.footer__col
+				.footer__winner
+					span Победитель <br> МЕЖДУНАРОДНОЙ премии
+					img(src=require('images/winner.svg'), alt="")
+			.footer__col
+				.footer__form
+					p Подписаться на новости
+					form(action='', method='post')
+						label
+							input(type='email', name='email', placeholder='Ваша почта')
+							button.button(type='submit')
+								img(src=require('images/send.svg'), alt="")
+		.footer__bottom
+			.footer__left
+				a.footer__copyright(href='#', target='_blank') Политика конфиденциальности
+				a.footer__copyright(href='#', target='_blank') Условия использования
+			.footer__center
+				.footer__center-inner
+					span Разработано в
+					img(src=require('images/logo-2.svg'), alt="")
+			.footer__right © 2022

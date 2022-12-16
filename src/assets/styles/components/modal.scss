@@ -1,0 +1,38 @@
+.modal {
+	width: 100%;
+
+	a.close-modal {
+		background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='24px' height='24px' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3e%3cg data-name='Layer 2'%3e%3cg data-name='close'%3e%3crect width='24' height='24' transform='rotate(180 12 12)' opacity='0'/%3e%3cpath d='M13.41 12l4.3-4.29a1 1 0 1 0-1.42-1.42L12 10.59l-4.29-4.3a1 1 0 0 0-1.42 1.42l4.3 4.29-4.3 4.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l4.29-4.3 4.29 4.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42z' fill='white'/%3e%3c/g%3e%3c/g%3e%3c/svg%3e");
+		top: 0;
+		right: -40px;
+
+		@include max(md) {
+			top: -40px;
+			right: 0;
+		}
+
+		@media (max-width: 1299px) and (orientation: landscape) {
+			top: 0;
+			right: -40px;
+		}
+	}
+}
+
+.modal-media {
+	max-width: 720px;
+	height: 480px;
+
+	@include max(md) {
+		height: 0;
+		padding-top: 56%;
+	}
+
+	iframe {
+		width: 100%;
+		height: 100%;
+
+		@include max(md) {
+			@include coverImage();
+		}
+	}
+}

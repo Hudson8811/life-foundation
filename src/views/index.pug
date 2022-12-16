@@ -1,0 +1,258 @@
+extends ./layouts/master.pug
+
+block title
+	title Благотворительный фонд "Яркая жизнь"
+
+block content
+	//img(src=require('images/map_hero.svg'), alt="")
+	//include ../assets/images/card-pos.svg
+
+	section.first-screen
+		.first-screen__bg
+			img(src=require('images/pattern-1.svg'), alt="")
+		.container.first-screen__container
+			.first-screen__content
+				.first-screen__title Приложение одно, <br> а добрых дел сотня
+				.first-screen__text Объединяем добрые <br> дела в одном месте
+				.first-screen__buttons
+					a.button(href='#')
+						img(src=require('images/app-store.svg'), alt="")
+						span App Store
+					a.button(href='#')
+						img(src=require('images/google-store.svg'), alt="")
+						span Google Store
+			.first-screen__circle
+				img(src=require('images/pattern-2.svg'), alt="")
+				img(src=require('images/circle.png'), srcset=require('images/circle@2x.png'), alt="")
+				img(src=require('images/phone-2.png'), srcset=require('images/phone-2@2x.png'), alt="")
+
+	section.advantages
+		.container
+			.advantages__wrapper
+				.advantages__item
+					.advantages__value(style='background: #32bdf2 url("./assets/images/advantages/1.png")') 5
+					.advantages__text 5 категорий помощи
+				.advantages__item
+					.advantages__value(style='background: #f7528e url("./assets/images/advantages/2.png")') 4
+					.advantages__text 4 способа поддержки
+				.advantages__item
+					.advantages__value(style='background: #9d59a2 url("./assets/images/advantages/3.png")') 0₽
+					.advantages__text Бесплатное использование
+				.advantages__item
+					.advantages__value(style='background: #ffe465 url("./assets/images/advantages/4.png")') 0%
+					.advantages__text Пожертвования без комиссий
+
+	section.using#about
+		.using__image-top
+			img(src=require('images/donation-box-1.png'), srcset=require('images/donation-box-1@2x.png'), alt="")
+		.using__image-bottom.d-visible
+			img(src=require('images/donation-box-2.png'), srcset=require('images/donation-box-2@2x.png'), alt="")
+		.container
+			.using__wrapper
+				.using__col
+					.js-trigger-1
+						#pinContainer1
+							#scrollTrigger1
+								.using-card.using-card--pink
+									.using-card__text На одной площадке работают специалисты из различных
+										|  областей со всех уголков страны: психологи, юристы, врачи и др.
+									.using-card__bottom
+										.using-card__icon
+											img(src=require('images/star.svg'), alt="")
+										.using-card__label Доверие деловых партнеров
+								.using-card.using-card--yellow
+									.using-card__text Повышайте свой авторитет и значимость в глазах
+										|  сотрудников и партнеров по бизнесу.
+									.using-card__bottom
+										.using-card__icon
+											img(src=require('images/star.svg'), alt="")
+										.using-card__label Доверие деловых партнеров
+								.using-card.using-card--purple
+									.using-card__text Приложение помогает налаживать контакты
+										|  с фондами, НКО и добровольцами.
+									.using-card__bottom
+										.using-card__icon
+											img(src=require('images/flash.svg'), alt="")
+										.using-card__label Быстрое взаимодействие
+								.using-card.using-card--blue
+									.using-card__text На одной площадке работают специалисты из различных
+										|  областей со всех уголков страны: психологи, юристы, врачи и др.
+									.using-card__bottom
+										.using-card__icon
+											img(src=require('images/like.svg'), alt="")
+										.using-card__label Профессиональная поддержка
+								.using-card
+									.using-card__text Поддержите в трудную минуту пожилых людей, детей-сирот,
+										|  инвалидов, людей с тяжелыми заболеваниями, брошенных домашних животных.
+									.using-card__bottom
+										.using-card__icon
+											img(src=require('images/heart.svg'), alt="")
+										.using-card__label Помощь нуждающимся
+						a.button.button--medium.using__button.m-visible-flex(href='#') Заполнить заявку
+				.using__col
+					.using__content
+						.title.using__title Используйте <br> площадку по максимуму и помогайте 24 на 7
+						.text.using__text Установите мобильное приложение “Хочу помочь” и почувствуйте, какой положительный эффект
+							|  оказывает ваша благородная инициатива
+						a.button.button--medium.using__button.d-visible-flex(href='#') Хочу помочь
+
+	section.help#help
+		.container
+			.help__wrapper
+				.help__col
+					.title.help__title Окажите реальную помощь в 2 клика
+					.text.help__text Через мобильное приложение “Хочу помочь” в ваших <br>
+						|  силах оказать всестороннюю поддержку
+					.using__image-bottom.m-visible
+						img(src=require('images/donation-box-2.png'), srcset=require('images/donation-box-2@2x.png'), alt="")
+					a.button.button--medium.help__button.d-visible-flex(href='#') Хочу помочь
+				.help__col.js-trigger-2
+					.circle
+						.circle__wrapper
+							img(src=require('images/circle-anim.png'), alt="")
+							.circle__digits
+								span
+									span 01
+								span
+									span 02
+								span
+									span 03
+								span
+									span 04
+							.circle__center
+								svg(width="58" height="59" viewBox="0 0 58 59" fill="none" xmlns="http://www.w3.org/2000/svg")
+									path(d="M45.0047 24.4946C42.303 24.4946 39.8882 25.8096 38.3819 27.818C36.8756 25.8096 34.4608 24.4946 31.759 24.4946C27.1924 24.4946 23.4865 28.2245 23.4865 32.815C23.4865 34.5843 23.7734 36.2341 24.2515 37.7403C26.5946 45.1761 33.863 49.6471 37.4494 50.8665C37.9515 51.0339 38.7883 51.0339 39.2904 50.8665C42.8768 49.6471 50.1452 45.2 52.4883 37.7403C52.9904 36.2101 53.2534 34.5843 53.2534 32.815C53.2773 28.2245 49.5714 24.4946 45.0047 24.4946Z" fill="#32BDF2")
+									path(d="M49.667 20.7411C49.667 21.291 49.1171 21.6496 48.5911 21.5062C45.3634 20.6693 41.8248 21.3627 39.147 23.2755C38.621 23.658 37.9037 23.658 37.4016 23.2755C35.5128 21.8887 33.2175 21.1236 30.8027 21.1236C24.6341 21.1236 19.6132 26.1685 19.6132 32.3849C19.6132 39.1273 22.8409 44.1721 26.0926 47.5433C26.2599 47.7107 26.1165 47.9976 25.9013 47.9019C19.3741 45.6784 4.83728 36.4494 4.83728 20.7411C4.83728 13.8074 10.4081 8.21265 17.294 8.21265C21.3825 8.21265 24.9927 10.1732 27.2641 13.2097C29.5594 10.1732 33.1697 8.21265 37.2343 8.21265C44.0962 8.21265 49.667 13.8074 49.667 20.7411Z" fill="#32BDF2")
+								span Ваша помощь
+					#pinContainer2
+						#scrollTrigger2
+							.help__item
+								.help__item-title(style='color: #32bdf2') Денежный перевод.
+								.help__item-text Пожертвуйте сумму на лечение <br> и реабилитацию тяжелобольных
+									|  людей, содержание приютов для животных
+							.help__item
+								.help__item-title(style='color: #f7528e') Сбор вещей.
+								.help__item-text Формируйте боксы с одеждой, обувью, средствами личной гигиены, продуктами.
+							.help__item
+								.help__item-title(style='color: #9d59a2') Волонтерство.
+								.help__item-text Оказывайте физическую помощь тем, кто в этом по-настоящему
+									|  нуждается, участвуйте в социальных проектах.
+							.help__item
+								.help__item-title(style='color: #f7c154') Оказание профессиональной помощи.
+								.help__item-text Консультируйте людей в тяжелых ситуациях и
+									|  помогайте экспертными советами.
+
+					a.button.button--medium.help__button.m-visible-flex(href='#') Хочу помочь
+	section.media#fond
+		.container
+			.media__wrapper
+				.media__col
+					a.media__preview(href='javascript:;', data-modal='#modalMedia')
+						figure
+							img(src=require('images/preview.jpg'), srcset=require('images/preview@2x.jpg'), alt="")
+							.media__play
+								include ../assets/images/play.svg
+						.media__image
+							img(src=require('images/donation-box-3.png'), srcset=require('images/donation-box-3@2x.png'), alt="")
+					a.button.button--medium.media__button.m-visible-flex(href='#') Заполнить заявку
+				.media__col
+					.title Добавляйте свой <br class="m-visible"> фонд — еще больше потенциальных благотворителей
+					.text.media__text Приглашаем некоммерческие организации присоединиться к мобильному приложению «Хочу помочь».
+						|  Пошаговый алгоритм действий для участия НКО в проекте вы найдете в заявке
+					a.button.button--medium.media__button.d-visible-flex(href='#') Заполнить заявку
+	section.app
+		.container
+			.app__wrapper
+				.title.title--small.app__title Все фонды теперь в одном окне на экране вашего смартфона
+				.text.text--big.app__text Воспользуйтесь удобным приложением, <br class="d-visible"> чтобы <br class="m-visible"> помогать нуждающимся
+				.app__buttons
+					a.button.app__button(href='#')
+						img(src=require('images/app-store.svg'), alt="")
+						span App Store
+					a.button.app__button(href='#')
+						img(src=require('images/google-store.svg'), alt="")
+						span Google Store
+				.app__image
+					img(src=require('images/phone.png'), srcset=require('images/phone@2x.png'), width="312", height="822", alt="")
+	section.statistics#facts
+		.container
+			.title.title--center.statistics__title Работа и миссия команды в цифрах <br class="m-visible"> и фактах
+			.text.text--center.statistics__text Цель проекта  — упростить добрую инициативу и предоставить результативную помощь тем, кто в этом так сильно нуждается
+			.statistics__wrapper
+				.statistics__item.statistics__item--blue
+					.statistics__top
+						.statistics__icon
+							img(src=require('images/folder.svg'), alt="")
+						.statistics__digit 100+
+					.statistics__label Реализованных проектов
+				.statistics__item.statistics__item--pink
+					.statistics__top
+						.statistics__icon
+							img(src=require('images/heart.svg'), alt="")
+						.statistics__digit 3 000 000₽
+					.statistics__label Оказанная помощь
+				.statistics__item.statistics__item--purple
+					.statistics__top
+						.statistics__icon
+							img(src=require('images/persons.svg'), alt="")
+						.statistics__digit 900+
+					.statistics__label Волонтеров
+	section.faq#faq
+		.faq__image-top
+			img(src=require('images/donation-box-4.png'), srcset=require('images/donation-box-4@2x.png'), alt="")
+		.container
+			.faq__wrapper
+				.faq__col
+					.title Отвечаем на <br class="m-visible"> ваши вопросы
+					#pinContainer3
+						#scrollTrigger3
+							.faq-card
+								.faq-card__group
+									.faq-card__question Мне хотелось бы самому выбирать, кому помогать. В приложении есть такая функция?
+									.faq-card__answer На платформе «Хочу помочь» 5 категорий на выбор и 4 варианта помощи.
+										|  В приложении удобный поиск по фондам и проектам, используйте фильтры и выбирайте, кого вы хотите поддержать.
+								.faq-card__digit 1
+							.faq-card
+								.faq-card__group
+									.faq-card__question Как узнать о результатах сбора денежных средств <br class="m-visible"> или иной помощи?
+									.faq-card__answer Находите через поиск нужный проект и изучайте отчет о ходе благотворительности.
+								.faq-card__digit 2
+				.faq__col
+					.faq__image
+						img(src=require('images/phones.png'), srcset=require('images/phones@2x.png'), width="565", height="1020", alt="")
+	section.follow
+		.container
+			.follow__wrapper
+				.follow__col
+					.follow__image
+						img(src=require('images/donation-box-5.png'), srcset=require('images/donation-box-5@2x.png'), alt="")
+					.follow__buttons.m-visible-flex
+						a.button.follow__button(href='#')
+							img(src=require('images/app-store.svg'), alt="")
+							span App Store
+						a.button.follow__button(href='#')
+							img(src=require('images/google-store.svg'), alt="")
+							span Google Store
+				.follow__col
+					.title.follow__title Помогать другим <br class="m-visible"> — это легко
+					.text.text--big.follow__text Чтобы поддержать нуждающихся быстро и просто, достаточно установить приложение на <br class="m-visible"> телефон.
+						|  Присоединяйтесь к благотворительному проекту <br class="m-visible"> «Хочу помочь» и оказывайте <br class="m-visible"> помощь
+					.follow__buttons.d-visible-flex
+						a.button(href='#')
+							img(src=require('images/app-store.svg'), alt="")
+							span App Store
+						a.button(href='#')
+							img(src=require('images/google-store.svg'), alt="")
+							span Google Store
+	section.registration
+		.registration__image-top
+			img(src=require('images/pattern-3.svg'), alt="")
+		.registration__image-bottom
+			img(src=require('images/pattern-4.svg'), alt="")
+		.container
+			.registration__wrapper
+				.registration__col
+					.title.registration__title Вместе сделаем этот мир лучше
+					.registration__text Выберите сами, кому хотите помочь сегодня
+				.registration__col
+					a.button.registration__button(href='#') Зарегистрировать свое НКО

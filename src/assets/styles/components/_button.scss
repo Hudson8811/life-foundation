@@ -1,0 +1,57 @@
+/* src/assets/styles/components/_button.scss  */
+
+
+.button {
+	@include isFlex(center, center, row, nowrap);
+	display: inline-flex;
+	font-size: 24px;
+	line-height: 31px;
+	font-weight: 700;
+	color: $white;
+	padding: 15.5px 32px;
+	border-radius: 101px;
+	background: linear-gradient(45deg, #9c58a1 0%, #f5518d 100%);
+	background-size: 400%;
+	animation: gradient-move 5s ease infinite forwards;
+	transition: 0.3s ease;
+
+	@include hover {
+		opacity: 0.8;
+	}
+
+	@include max(md) {
+		font-size: 14px;
+		line-height: 18px;
+		padding: 5px 15px;
+	}
+
+	svg,
+	img {
+		margin-right: 10px;
+
+		@include max(md) {
+			margin-right: 4px;
+			transform: scale(0.7);
+		}
+	}
+
+	&--small {
+		font-size: 16px;
+		line-height: 21px;
+		padding: 10px 27px;
+	}
+
+	&--medium {
+		font-size: 16px;
+		line-height: 21px;
+		padding: 13.5px 35px;
+
+		@include max(md) {
+			font-size: 14px;
+			line-height: 18px;
+			padding: 13px 35px;
+		}
+	}
+}
+
+

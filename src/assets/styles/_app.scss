@@ -1,0 +1,42 @@
+@import 'normalize.css';
+
+/*
+  Utils
+*/
+@import './utils/vars';
+@import './utils/dimensions';
+@import './utils/mixins';
+
+/*
+  Libs
+*/
+
+@import './libs/slick.css';
+@import 'libs/jquery.modal';
+
+/*
+  Base
+*/
+@import './base/fonts';
+
+/*
+  Layout
+*/
+@import './layout/general';
+
+/*
+  Components
+*/
+
+@import './components/button';
+@import './components/form';
+@import './components/header';
+@import './components/footer';
+@import './components/modal';
+@import './components/menu';
+
+
+/*
+  Pages
+*/
+@import './pages/index';
