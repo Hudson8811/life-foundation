@@ -8,6 +8,11 @@
 	font-weight: 700;
 	color: $black-33;
 
+	@include max(xl) {
+		font-size: 36px;
+		line-height: 46px;
+	}
+
 	@include max(md) {
 		font-size: 24px;
 		line-height: 36px;
@@ -163,27 +168,17 @@
 	z-index: 1;
 	transition: 0.3s ease;
 
-	@include max(md) {
+	@media (max-width: 1800px) {
 		min-width: 300px;
 		max-width: 300px;
 		height: 300px;
 		margin: 0 auto;
 	}
 
-	&::before {
-		content: '';
-		display: block;
-		width: 140%;
-		height: 100%;
-		position: absolute;
-		top: 0;
-		left: 0;
-		background: linear-gradient(90deg, #f5f5f7 71.78%, rgba(255, 255, 255, 0) 100%);
-		pointer-events: none;
-
-		@include max(md) {
-			display: none;
-		}
+	@media (max-width: 1399px) and (max-height: 800px) {
+		min-width: 180px;
+		max-width: 180px;
+		height: 180px;
 	}
 
 	&__wrapper {
@@ -199,6 +194,11 @@
 		left: 50%;
 		transform: translate(-50%, -50%);
 
+		@media (max-width: 1399px) and (max-height: 800px) {
+			width: 80px;
+			height: 80px;
+		}
+
 		span {
 			font-family: $secondfont;
 			font-size: 31px;
@@ -207,18 +207,28 @@
 			text-align: center;
 			margin-top: 13px;
 
-			@include max(md) {
+			@media (max-width: 1800px) {
 				max-width: 90px;
 				font-size: 20px;
 				line-height: 20px;
 				margin-top: 10px;
 			}
+
+			@media (max-width: 1399px) and (max-height: 800px) {
+				font-size: 14px;
+				line-height: 14px;
+			}
 		}
 
 		svg {
-			@include max(md) {
+			@media (max-width: 1800px) {
 				width: 38px;
 				height: 38px;
+			}
+
+			@media (max-width: 1399px) and (max-height: 800px) {
+				width: 20px;
+				height: 20px;
 			}
 		}
 	}
@@ -243,9 +253,14 @@
 				display: inline-block;
 			}
 
-			@include max(md) {
+			@media (max-width: 1800px) {
 				font-size: 23px;
 				line-height: 40px;
+			}
+
+			@media (max-width: 1399px) and (max-height: 800px) {
+				font-size: 14px;
+				line-height: 14px;
 			}
 
 			&:first-child,
@@ -263,7 +278,7 @@
 			&:first-child {
 				top: 25px;
 
-				@include max(md) {
+				@media (max-width: 1800px) {
 					top: 16px;
 				}
 			}
@@ -271,15 +286,19 @@
 			&:nth-child(2) {
 				right: 25px;
 
-				@include max(md) {
+				@media (max-width: 1800px) {
 					right: 16px;
+				}
+
+				@media (max-width: 1399px) and (max-height: 800px) {
+					right: 8px;
 				}
 			}
 
 			&:nth-child(3) {
 				bottom: 25px;
 
-				@include max(md) {
+				@media (max-width: 1800px) {
 					bottom: 16px;
 				}
 			}
@@ -287,8 +306,12 @@
 			&:last-child {
 				left: 25px;
 
-				@include max(md) {
+				@media (max-width: 1800px) {
 					left: 20px;
+				}
+
+				@media (max-width: 1399px) and (max-height: 800px) {
+					left: 12px;
 				}
 			}
 		}
@@ -306,10 +329,22 @@
 	padding: 27px 32px 45px;
 	position: relative;
 
+	@include max(xl) {
+		min-width: 400px;
+		max-width: 400px;
+	}
+
 	@include max(md) {
 		min-width: 317px;
 		max-width: 317px;
 		padding: 27px 13px 106px 32px;
+	}
+
+	&__group {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		height: 100%;
 	}
 
 	&__question {
@@ -600,8 +635,13 @@
 .using {
 	padding: 158px 0 206px;
 	position: relative;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 
 	@include max(md) {
+		height: auto;
 		padding: 53px 0 64px;
 	}
 
@@ -614,14 +654,14 @@
 	&__image-top {
 		width: 192px;
 		height: 192px;
-		top: 0;
-		left: 2.5%;
+		top: -160px;
+		left: 0;
 
 		@include max(md) {
 			width: 88px;
 			height: 88px;
 			left: unset;
-			top: -26px;
+			top: -88px;
 			right: 5%;
 		}
 	}
@@ -644,6 +684,10 @@
 		}
 	}
 
+	&__container {
+		position: relative;
+	}
+
 	&__wrapper {
 		@include isFlex(center, flex-start);
 		gap: 134px;
@@ -655,6 +699,8 @@
 	}
 
 	&__col {
+		position: relative;
+
 		&:first-child {
 			width: calc(50% - 67px);
 
@@ -678,20 +724,25 @@
 		width: calc(100% + 146px);
 		margin-left: -146px;
 
-		@include max(sm) {
+		@include max(xl) {
+			width: calc(100% + 40px);
+			margin-left: -20px;
+		}
+
+		@include max(md) {
 			overflow: visible;
-			width: 100%;
-			margin-left: 0;
 		}
 	}
 
 	#scrollTrigger1 {
-		width: 100%;
-		@include isFlex(flex-start, flex-start, row, nowrap);
 		gap: 44px;
+		display: inline-flex;
+		height: 100%;
+		padding-left: 20px;
 
 		@include max(md) {
 			gap: 12px;
+			padding: 0 20px;
 		}
 	}
 
@@ -725,6 +776,10 @@
 .help {
 	padding: 42px 0 206px;
 	position: relative;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 
 	@include max(md) {
 		padding: 42px 0 80px;
@@ -751,6 +806,10 @@
 		@include isFlex(center, flex-start, row, nowrap);
 		gap: 93px;
 
+		@media (max-width: 1800px) {
+			gap: 40px;
+		}
+
 		@include max(md) {
 			flex-direction: column;
 			gap: 15px;
@@ -759,6 +818,10 @@
 		> .help__col:first-child {
 			width: calc(40% - 46.5px);
 
+			@media (max-width: 1800px) {
+				width: calc(40% - 20px);
+			}
+
 			@include max(md) {
 				width: 100%;
 			}
@@ -766,6 +829,10 @@
 			+ div {
 				width: calc(60% - 46.5px);
 				@include isFlex(center, flex-start, row, nowrap);
+
+				@media (max-width: 1800px) {
+					width: calc(60% - 20px);
+				}
 
 				@include max(md) {
 					width: 100%;
@@ -796,36 +863,47 @@
 			max-width: 330px;
 			width: 100%;
 			margin-top: 32px;
-			position: relative;
-			left: 50%;
-			transform: translateX(-50%);
 		}
 	}
 
 	#pinContainer2 {
 		overflow: hidden;
-		width: calc(100% + 146px);
-		margin-right: -146px;
+		width: calc(100% + 20px);
+		margin-right: -20px;
 		padding-left: 93px;
+		position: relative;
+
+		@include max(xl) {
+			width: calc(100% + 40px);
+			margin-left: -20px;
+		}
 
 		@include max(md) {
-			width: 100%;
+			width: calc(100% + 40px);
 			margin-right: 0;
 			margin-top: 32px;
 			margin-left: -20px;
-			padding-left: 0;
+			padding: 0 20px;
 		}
 
-		@include max(sm) {
-			overflow: visible;
-			width: 100%;
-			margin-right: 0;
-			padding-left: 0;
+		&::after {
+			content: '';
+			display: block;
+			width: 93px;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background: linear-gradient(90deg, #f5f5f7 71.78%, rgba(255, 255, 255, 0) 100%);
+			pointer-events: none;
+
+			@include max(md) {
+				display: none;
+			}
 		}
 	}
 
 	#scrollTrigger2 {
-		width: 100%;
 		@include isFlex(flex-start, flex-start, row, nowrap);
 		gap: 40px;
 
@@ -882,6 +960,10 @@
 		&:first-child {
 			width: calc(58.2% - 50px);
 
+			@include max(xl) {
+				width: calc(50% - 50px);
+			}
+
 			@include max(md) {
 				width: 100%;
 				order: 1;
@@ -890,6 +972,10 @@
 
 		&:last-child {
 			width: calc(41.8% - 50px);
+
+			@include max(xl) {
+				width: calc(50% - 50px);
+			}
 
 			@include max(md) {
 				width: 100%;
@@ -1136,6 +1222,10 @@
 		position: relative;
 		border-radius: 16px;
 
+		@include max(xl) {
+			padding: 50px 25px;
+		}
+
 		@include max(md) {
 			max-width: 84%;
 			width: 100%;
@@ -1211,10 +1301,20 @@
 		font-weight: 700;
 		color: $black-33;
 
+		@include max(xl) {
+			font-size: 28px;
+			line-height: 34px;
+		}
+
 		@include max(md) {
 			font-size: 24px;
 			line-height: 36px;
 			text-align: center;
+		}
+
+		@include max(xs) {
+			font-size: 18px;
+			line-height: 26px;
 		}
 	}
 }
@@ -1222,6 +1322,10 @@
 .faq {
 	padding: 86px 0 206px;
 	position: relative;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 
 	@include max(md) {
 		padding: 55px 0 0;
@@ -1288,22 +1392,16 @@
 
 	#pinContainer3 {
 		overflow: hidden;
-		width: calc(100% + 146px);
-		margin-left: -146px;
+		width: calc(100% + 40px);
+		margin-left: -20px;
 		margin-top: 56px;
 		padding-right: 50px;
 		position: relative;
 		z-index: 1;
 
 		@include max(md) {
-			margin-top: 4px;
-			margin-left: -20px;
-		}
-
-		@include max(sm) {
 			overflow: visible;
-			width: 100%;
-			margin-left: 0;
+			margin-top: 4px;
 		}
 
 		&::before {
@@ -1325,13 +1423,13 @@
 	}
 
 	#scrollTrigger3 {
-		width: 100%;
-		@include isFlex(flex-start, flex-start, row, nowrap);
+		display: inline-flex;
 		gap: 44px;
-		padding: 20px 0 160px;
+		padding: 20px 20px 160px;
 
 		@include max(md) {
 			gap: 15px;
+			padding: 0 20px;
 		}
 	}
 }
@@ -1357,7 +1455,12 @@
 			max-width: 662px;
 			width: 100%;
 
+			@include max(xl) {
+				width: calc(50% - 45px);
+			}
+
 			@include max(md) {
+				width: 100%;
 				order: 1;
 				margin: 0 auto;
 			}
@@ -1365,6 +1468,10 @@
 
 		&:last-child {
 			width: calc(100% - 662px - 90px);
+
+			@include max(xl) {
+				width: calc(50% - 45px);
+			}
 
 			@include max(md) {
 				width: 100%;

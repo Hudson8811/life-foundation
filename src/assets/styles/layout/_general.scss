@@ -146,14 +146,14 @@ li {
 .container {
 	box-sizing: border-box;
 	width: 1635px;
-	max-width: 95%;
-	max-width: calc(100% - 20px * 2);
+	padding: 0 20px;
+	max-width: 100%;
+	//max-width: calc(100% - 20px * 2);
 	margin: 0 auto;
 
 	@include max(sm) {
 		max-width: 100%;
 		width: 100%;
-		padding: 0 vw(18);
 	}
 }
 

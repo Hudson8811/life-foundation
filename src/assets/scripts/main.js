@@ -12,11 +12,11 @@ $(document).ready(function () {
 	var horzTl1 = new TimelineMax().to('#scrollTrigger1', 1, {x: width1});
 
 	var scene1 = new ScrollMagic.Scene({
-		triggerElement: window.matchMedia('(max-width: 1099px)').matches ? '.js-trigger-1' : '.using',
+		triggerElement: '.using',
 		triggerHook: 'onLeave',
 		duration: '250%'
 	})
-		.setPin(window.matchMedia('(max-width: 1099px)').matches ? '.js-trigger-1' : '.using')
+		.setPin('.using')
 		.setTween(horzTl1)
 		.addTo(controller1);
 
@@ -26,7 +26,7 @@ $(document).ready(function () {
 	var horzTl2 = new TimelineMax().to('#scrollTrigger2', 1, {x: width2});
 
 	var scene2 = new ScrollMagic.Scene({
-		triggerElement: window.matchMedia('(max-width: 1099px)').matches ? '.js-trigger-2' : '.help',
+		triggerElement: '.help',
 		triggerHook: 'onLeave',
 		duration: '250%'
 	}).on('progress', (e) => {
@@ -48,7 +48,7 @@ $(document).ready(function () {
 			$('.circle__digits span > span').css('transform', 'rotate(270deg)');
 		}
 	})
-		.setPin(window.matchMedia('(max-width: 1099px)').matches ? '.js-trigger-2' : '.help')
+		.setPin('.help')
 		.setTween(horzTl2)
 		.addTo(controller2);
 
