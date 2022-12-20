@@ -554,16 +554,20 @@
 				position: relative;
 			}
 
-			&:nth-child(3) {
-				display: none;
+			&.m-visible {
+				display: block;
+				min-width: 131%;
+				position: absolute;
+				top: -120px;
+				left: -44px;
+			}
 
-				@include max(md) {
-					display: block;
-					min-width: 131%;
-					position: absolute;
-					top: -120px;
-					left: -44px;
-				}
+			&.d-visible {
+				display: block;
+				min-width: 128%;
+				position: absolute;
+				top: -128px;
+				left: -72px;
 			}
 		}
 	}

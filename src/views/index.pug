@@ -15,16 +15,17 @@ block content
 				.first-screen__title Приложение одно, <br> а добрых дел сотня
 				.first-screen__text Объединяем добрые <br> дела в одном месте
 				.first-screen__buttons
-					a.button(href='#')
+					a.button(href='https://apps.apple.com/ru/app/id1617359042', target='_blank')
 						img(src=require('images/app-store.svg'), alt="")
 						span App Store
-					a.button(href='#')
+					a.button(href='https://play.google.com/store/apps/details?id=com.appomart.helpinghand', target='_blank')
 						img(src=require('images/google-store.svg'), alt="")
 						span Google Store
 			.first-screen__circle
 				img(src=require('images/pattern-2.svg'), alt="")
 				img(src=require('images/circle.png'), srcset=require('images/circle@2x.png'), alt="")
-				img(src=require('images/phone-2.png'), srcset=require('images/phone-2@2x.png'), alt="")
+				img.m-visible(src=require('images/phone-2.png'), srcset=require('images/phone-2@2x.png'), alt="")
+				img.d-visible(src=require('images/phone-3.png'), srcset=require('images/phone-3@2x.png'), alt="")
 
 	section.advantages
 		.container
@@ -165,10 +166,10 @@ block content
 				.title.title--small.app__title Все фонды теперь в одном окне на экране вашего смартфона
 				.text.text--big.app__text Воспользуйтесь удобным приложением, <br class="d-visible"> чтобы <br class="m-visible"> помогать нуждающимся
 				.app__buttons
-					a.button.app__button(href='#')
+					a.button.app__button(href='https://apps.apple.com/ru/app/id1617359042', target='_blank')
 						img(src=require('images/app-store.svg'), alt="")
 						span App Store
-					a.button.app__button(href='#')
+					a.button.app__button(href='https://play.google.com/store/apps/details?id=com.appomart.helpinghand', target='_blank')
 						img(src=require('images/google-store.svg'), alt="")
 						span Google Store
 				.app__image
@@ -237,10 +238,10 @@ block content
 					.text.text--big.follow__text Чтобы поддержать нуждающихся быстро и просто, достаточно установить приложение на <br class="m-visible"> телефон.
 						|  Присоединяйтесь к благотворительному проекту <br class="m-visible"> «Хочу помочь» и оказывайте <br class="m-visible"> помощь
 					.follow__buttons.d-visible-flex
-						a.button(href='#')
+						a.button(href='https://apps.apple.com/ru/app/id1617359042', target='_blank')
 							img(src=require('images/app-store.svg'), alt="")
 							span App Store
-						a.button(href='#')
+						a.button(href='https://play.google.com/store/apps/details?id=com.appomart.helpinghand', target='_blank')
 							img(src=require('images/google-store.svg'), alt="")
 							span Google Store
 	section.registration

@@ -9,12 +9,16 @@ $(document).ready(function () {
 	/* Scroll 1 */
 	var controller1 = new ScrollMagic.Controller();
 	var width1 = -($('#scrollTrigger1').get(0).scrollWidth - $('#pinContainer1').width()) + 'px';
-	var horzTl1 = new TimelineMax().to('#scrollTrigger1', 1, {x: width1});
+	var horzTl1 = new TimelineMax().to('#scrollTrigger1', 1, {x: width1}, 0.3);
 
 	var scene1 = new ScrollMagic.Scene({
 		triggerElement: '.using',
 		triggerHook: 'onLeave',
 		duration: '250%'
+	}).on('progress', function (e) {
+		if (e.progress > 0.95) {
+			setTimeout(() => {}, 3)
+		}
 	})
 		.setPin('.using')
 		.setTween(horzTl1)
@@ -23,7 +27,7 @@ $(document).ready(function () {
 	/* Scroll 2 */
 	var controller2 = new ScrollMagic.Controller();
 	var width2 = -($('#scrollTrigger2').get(0).scrollWidth - $('#pinContainer2').width()) + 'px';
-	var horzTl2 = new TimelineMax().to('#scrollTrigger2', 1, {x: width2});
+	var horzTl2 = new TimelineMax().to('#scrollTrigger2', 1, {x: width2}, 0.3);
 
 	var scene2 = new ScrollMagic.Scene({
 		triggerElement: '.help',
@@ -55,7 +59,7 @@ $(document).ready(function () {
 	/* Scroll 3 */
 	var controller3 = new ScrollMagic.Controller();
 	var width3 = -($('#scrollTrigger3').get(0).scrollWidth - $('#pinContainer3').width()) + 'px';
-	var horzTl3 = new TimelineMax().to('#scrollTrigger3', 1, {x: width3})
+	var horzTl3 = new TimelineMax().to('#scrollTrigger3', 1, {x: width3}, 0.3)
 
 	var scene3 = new ScrollMagic.Scene({
 		triggerElement: '.faq',
