@@ -14,11 +14,7 @@ $(document).ready(function () {
 	var scene1 = new ScrollMagic.Scene({
 		triggerElement: '.using',
 		triggerHook: 'onLeave',
-		duration: '250%'
-	}).on('progress', function (e) {
-		if (e.progress > 0.95) {
-			setTimeout(() => {}, 3)
-		}
+		duration: '250%',
 	})
 		.setPin('.using')
 		.setTween(horzTl1)
