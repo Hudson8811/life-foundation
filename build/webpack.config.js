@@ -10,7 +10,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 
-const ASSET_PATH = process.env.ASSET_PATH || '/'
+const ASSET_PATH = process.env.ASSET_PATH || './'
 //const ASSET_PATH = ''
 
 // Files
@@ -41,7 +41,7 @@ module.exports = (env) => {
 		output: {
 			publicPath: PATH_DIST,
 			path: path.join(__dirname, PATH_FOLDER),
-			filename: './assets/js/[name].[contenthash:7].bundle.js'
+			filename: 'assets/js/[name].[contenthash:7].bundle.js'
 		},
 		devServer: {
 			contentBase: path.join(__dirname, '../src'),
@@ -107,28 +107,28 @@ module.exports = (env) => {
 					test: /\.(png|jpe?g|gif|svg|ico)(\?.*)?$/,
 					type: 'asset/resource',
 					generator: {
-						filename: './assets/images/[name].[contenthash:7][ext]'
+						filename: 'assets/images/[name].[contenthash:7][ext]'
 					}
 				},
 				{
 					test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
 					type: 'asset/resource',
 					generator: {
-						filename: './assets/fonts/[name].[contenthash:7][ext]'
+						filename: 'assets/fonts/[name].[contenthash:7][ext]'
 					}
 				},
 				{
 					test: /\.(mp3)(\?.*)?$/,
 					type: 'asset/resource',
 					generator: {
-						filename: './assets/audio/[name].[contenthash:7][ext]'
+						filename: 'assets/audio/[name].[contenthash:7][ext]'
 					},
 				}
 				/*{
 					test: /\.(mp4)(\?.*)?$/,
 					type: 'asset/resource',
 					generator: {
-						filename: './assets/videos/[name].[contenthash:7][ext]'
+						filename: 'assets/videos/[name].[contenthash:7][ext]'
 					},
 				}*/
 			]
@@ -150,7 +150,7 @@ module.exports = (env) => {
 					vendors: false,
 					// vendor chunk
 					vendor: {
-						filename: './assets/js/vendor.[chunkhash:7].bundle.js',
+						filename: 'assets/js/vendor.[chunkhash:7].bundle.js',
 						// sync + async chunks
 						chunks: 'all',
 						// import file path containing node_modules
@@ -165,17 +165,17 @@ module.exports = (env) => {
 				patterns: [
 					{ from: '../manifest.json', to: 'manifest.json' },
 					{ from: '../browserconfig.xml', to: 'browserconfig.xml' },
-					{ from: './assets/images/favicons/android-chrome-192x192.png', to: './assets/images/android-chrome-192x192.png' },
-					{ from: './assets/images/favicons/android-chrome-512x512.png', to: './assets/images/android-chrome-512x512.png' },
-					{ from: './assets/images/favicons/mstile-70x70.png', to: './assets/images/mstile-70x70.png' },
-					{ from: './assets/images/favicons/mstile-150x150.png', to: './assets/images/mstile-150x150.png' },
-					{ from: './assets/images/favicons/mstile-310x150.png', to: './assets/images/mstile-310x150.png' },
-					{ from: './assets/images/favicons/mstile-310x310.png', to: './assets/images/mstile-310x310.png' },
-					{ from: './assets/images/favicons/mstile-144x144.png', to: './assets/images/mstile-144x144.png' }
+					{ from: 'assets/images/favicons/android-chrome-192x192.png', to: 'assets/images/android-chrome-192x192.png' },
+					{ from: 'assets/images/favicons/android-chrome-512x512.png', to: 'assets/images/android-chrome-512x512.png' },
+					{ from: 'assets/images/favicons/mstile-70x70.png', to: 'assets/images/mstile-70x70.png' },
+					{ from: 'assets/images/favicons/mstile-150x150.png', to: 'assets/images/mstile-150x150.png' },
+					{ from: 'assets/images/favicons/mstile-310x150.png', to: 'assets/images/mstile-310x150.png' },
+					{ from: 'assets/images/favicons/mstile-310x310.png', to: 'assets/images/mstile-310x310.png' },
+					{ from: 'assets/images/favicons/mstile-144x144.png', to: 'assets/images/mstile-144x144.png' }
 				]
 			}),*/
 			new MiniCssExtractPlugin({
-				filename: './assets/css/[name].[chunkhash:7].bundle.css',
+				filename: 'assets/css/[name].[chunkhash:7].bundle.css',
 				chunkFilename: '[id].css',
 			}),
 
