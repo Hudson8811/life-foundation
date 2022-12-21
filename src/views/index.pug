@@ -6,7 +6,7 @@ block content
 	//img(src=require('images/map_hero.svg'), alt="")
 	//include ../assets/images/card-pos.svg
 
-	section.first-screen
+	section.first-screen#first-screen
 		.first-screen__bg
 			img(src=require('images/pattern-1.svg'), alt="")
 		.container.first-screen__container
@@ -93,7 +93,7 @@ block content
 						.title.using__title Используйте <br> площадку по максимуму и помогайте 24 на 7
 						.text.using__text Установите мобильное приложение “Хочу помочь” и почувствуйте, какой положительный эффект
 							|  оказывает ваша благородная инициатива
-						a.button.button--medium.using__button.d-visible-flex(href='#') Хочу помочь
+						a.button.button--medium.using__button.d-visible-flex.anchor(href='#first-screen') Хочу помочь
 
 	section.help#help
 		.container
@@ -104,7 +104,7 @@ block content
 						|  силах оказать всестороннюю поддержку
 					.using__image-bottom.m-visible
 						img(src=require('images/donation-box-2.png'), srcset=require('images/donation-box-2@2x.png'), alt="")
-					a.button.button--medium.help__button.d-visible-flex(href='#') Хочу помочь
+					a.button.button--medium.help__button.d-visible-flex.anchor(href='#first-screen') Хочу помочь
 				.help__col.js-trigger-2
 					.circle
 						.circle__wrapper
@@ -141,7 +141,7 @@ block content
 								.help__item-text Консультируйте людей в тяжелых ситуациях и
 									|  помогайте экспертными советами.
 
-					a.button.button--medium.help__button.m-visible-flex(href='#') Хочу помочь
+					a.button.button--medium.help__button.m-visible-flex.anchor(href='#first-screen') Хочу помочь
 	section.media#fond
 		.container
 			.media__wrapper

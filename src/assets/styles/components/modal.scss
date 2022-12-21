@@ -19,8 +19,8 @@
 }
 
 .modal-media {
-	max-width: 560px;
-	height: 315px;
+	max-width: 1200px;
+	height: 700px;
 
 	@include max(md) {
 		height: 0;
