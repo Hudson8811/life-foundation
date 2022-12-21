@@ -31,20 +31,16 @@ $(document).ready(function () {
 		duration: '250%'
 	}).on('progress', (e) => {
 		if (e.progress < 0.25) {
-			$('.circle').css('transform', 'rotate(0)');
-			$('.circle__center').css('transform', 'rotate(0) translate(-50%, -50%)');
+			$('.circle__wrapper').css('transform', 'rotate(0)');
 			$('.circle__digits span > span').css('transform', 'rotate(0)');
 		} else if (e.progress >= 0.25 && e.progress < 0.5) {
-			$('.circle').css('transform', 'rotate(-90deg)');
-			$('.circle__center').css('transform', 'rotate(90deg) translate(-50%, 50%)');
+			$('.circle__wrapper').css('transform', 'rotate(-90deg)');
 			$('.circle__digits span > span').css('transform', 'rotate(90deg)');
 		} else if (e.progress >= 0.5 && e.progress < 0.75) {
-			$('.circle').css('transform', 'rotate(-180deg)');
-			$('.circle__center').css('transform', 'rotate(180deg) translate(50%, 50%)');
+			$('.circle__wrapper').css('transform', 'rotate(-180deg)');
 			$('.circle__digits span > span').css('transform', 'rotate(180deg)');
 		} else if (e.progress >= 0.75) {
-			$('.circle').css('transform', 'rotate(-270deg)');
-			$('.circle__center').css('transform', 'rotate(270deg) translate(50%, -50%)');
+			$('.circle__wrapper').css('transform', 'rotate(-270deg)');
 			$('.circle__digits span > span').css('transform', 'rotate(270deg)');
 		}
 	})
@@ -66,9 +62,9 @@ $(document).ready(function () {
 		.setTween(horzTl3)
 		.addTo(controller3);
 
-	window.addEventListener('resize', () => {
+	/*window.addEventListener('resize', () => {
 		window.location.reload();
-	});
+	});*/
 
 	/* Anchor */
 	document.querySelectorAll('.anchor').forEach(anchor => {
