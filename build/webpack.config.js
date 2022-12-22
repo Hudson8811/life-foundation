@@ -114,7 +114,7 @@ module.exports = (env) => {
 					test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
 					type: 'asset/resource',
 					generator: {
-						filename: '../fonts/[name].[contenthash:7][ext]'
+						filename: 'assets/fonts/[name].[contenthash:7][ext]'
 					}
 				},
 				{
